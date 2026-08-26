@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#160d18" />
+  <meta name="description" content="Un petit cadeau d'anniversaire pour Anifa Iteka Harubuntu." />
+  <title>Joyeux anniversaire Anifa Iteka Harubuntu ❤️</title>
+
+  <style>
+    :root{
+      --bg:#120b14;
+      --bg2:#271126;
+      --accent:#ff5f91;
+      --accent2:#ffb7ca;
+      --text:#fff7fb;
+      --muted:#e9cfd8;
+      --card:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.15);
+      --deep:#0b0610;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255,95,145,.17), transparent 30%),
+        radial-gradient(circle at 90% 30%, rgba(182,88,255,.14), transparent 34%),
+        linear-gradient(160deg,var(--bg),var(--bg2));
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    .hearts{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .heart{
+      position:absolute;
+      bottom:-60px;
+      opacity:.15;
+      animation:floatUp linear infinite;
+      filter:drop-shadow(0 0 10px rgba(255,95,145,.35));
+    }
+    @keyframes floatUp{
+      to{transform:translateY(-115vh) rotate(360deg);opacity:0}
+    }
+
+    header,main,section,footer{position:relative;z-index:1}
+
+    .hero{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:32px 20px;
+      text-align:center;
+    }
+
+    .hero-card{
+      width:min(900px,100%);
+      border:1px solid var(--line);
+      background:rgba(12,6,14,.60);
+      backdrop-filter:blur(16px);
+      border-radius:30px;
+      padding:52px 26px;
+      box-shadow:0 22px 70px rgba(0,0,0,.35);
+      animation:fadeUp 1.2s ease both;
+    }
+
+    .mini{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,95,145,.13);
+      border:1px solid rgba(255,95,145,.28);
+      color:var(--accent2);
+      font-size:.9rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-size:clamp(2.65rem,9vw,6rem);
+      line-height:.96;
+      margin:22px 0 18px;
+      letter-spacing:-.05em;
+    }
+
+    h1 span{
+      display:block;
+      color:var(--accent);
+      text-shadow:0 0 30px rgba(255,95,145,.25);
+      margin-top:10px;
+    }
+
+    .dates{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin:20px 0 24px;
+    }
+
+    .date-pill{
+      padding:9px 13px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.055);
+      border-radius:999px;
+      color:#ffeaf1;
+      font-size:.93rem;
+    }
+
+    .lead{
+      max-width:720px;
+      margin:0 auto 28px;
+      color:var(--muted);
+      font-size:clamp(1.05rem,2.5vw,1.3rem);
+      line-height:1.75;
+    }
+
+    .countdown{
+      margin:24px auto 28px;
+      max-width:690px;
+      padding:18px 20px;
+      border-radius:18px;
+      border:1px solid rgba(255,95,145,.25);
+      background:linear-gradient(145deg,rgba(255,95,145,.10),rgba(255,255,255,.04));
+      color:#ffe9f0;
+      line-height:1.6;
+    }
+
+    .countdown strong{color:var(--accent2)}
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+    }
+
+    button,.btn{
+      border:none;
+      cursor:pointer;
+      border-radius:999px;
+      padding:14px 20px;
+      font-weight:700;
+      text-decoration:none;
+      transition:.2s ease;
+      font-size:.97rem;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent),#ff86aa);
+      color:#220712;
+      box-shadow:0 10px 30px rgba(255,95,145,.25);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.08);
+      color:white;
+      border:1px solid var(--line);
+    }
+
+    button:hover,.btn:hover{transform:translateY(-2px)}
+
+    .section{
+      width:min(1100px,100%);
+      margin:0 auto;
+      padding:82px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:34px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2rem,7vw,3.6rem);
+      margin:0 0 12px;
+      letter-spacing:-.04em;
+    }
+
+    .section-title p{
+      color:var(--muted);
+      margin:0 auto;
+      max-width:760px;
+      line-height:1.7;
+    }
+
+    .timeline{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .moment{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:26px;
+      min-height:190px;
+    }
+
+    .moment .when{
+      color:var(--accent2);
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .moment h3{margin:10px 0 8px;font-size:1.3rem}
+    .moment p{margin:0;color:var(--muted);line-height:1.7}
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+    }
+
+    .photo{
+      grid-column:span 4;
+      position:relative;
+      min-height:410px;
+      overflow:hidden;
+      border-radius:24px;
+      border:1px solid var(--line);
+      box-shadow:0 16px 45px rgba(0,0,0,.27);
+      background:#25121f;
+    }
+
+    .photo:nth-child(1), .photo:nth-child(4){grid-column:span 7}
+    .photo:nth-child(2), .photo:nth-child(5){grid-column:span 5}
+
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      position:absolute;
+      inset:0;
+      transition:transform .55s ease,filter .55s ease;
+    }
+
+    .photo:hover img{transform:scale(1.04);filter:brightness(.78)}
+
+    .caption{
+      position:absolute;
+      inset:auto 0 0 0;
+      padding:30px 22px 22px;
+      background:linear-gradient(transparent,rgba(0,0,0,.82));
+      font-weight:700;
+      line-height:1.45;
+      text-shadow:0 1px 3px rgba(0,0,0,.45);
+    }
+
+    .letters{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .letter{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+      min-height:290px;
+      transform:translateY(26px);
+      opacity:0;
+      transition:.7s ease;
+    }
+
+    .letter.show{transform:none;opacity:1}
+    .letter .emoji{font-size:2rem}
+    .letter h3{font-size:1.35rem;margin:14px 0 10px}
+    .letter p{color:var(--muted);line-height:1.75;margin:0}
+
+    .big-message{
+      text-align:center;
+      border:1px solid rgba(255,95,145,.25);
+      background:linear-gradient(145deg,rgba(255,95,145,.12),rgba(255,255,255,.05));
+      border-radius:30px;
+      padding:46px 24px;
+      box-shadow:0 25px 70px rgba(0,0,0,.25);
+    }
+
+    .big-message p{
+      max-width:840px;
+      margin:0 auto;
+      font-size:clamp(1.15rem,3vw,1.55rem);
+      line-height:1.85;
+      color:#ffeaf1;
+    }
+
+    .kirundi{
+      display:block;
+      margin:24px auto 0;
+      max-width:800px;
+      color:var(--accent2);
+      font-size:clamp(1.15rem,3vw,1.45rem);
+      font-weight:800;
+      line-height:1.6;
+    }
+
+    .signature{
+      margin-top:26px;
+      color:#fff;
+      font-weight:800;
+    }
+
+    footer{
+      text-align:center;
+      padding:36px 18px 50px;
+      color:#cfb7c2;
+      font-size:.92rem;
+    }
+
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:22px;
+      transform:translateX(-50%) translateY(30px);
+      width:max-content;
+      max-width:calc(100vw - 28px);
+      text-align:center;
+      background:#fff;
+      color:#25111b;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      opacity:0;
+      z-index:20;
+      transition:.3s ease;
+      box-shadow:0 10px 40px rgba(0,0,0,.35);
+    }
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(24px)}
+      to{opacity:1;transform:none}
+    }
+
+    @media(max-width:800px){
+      .timeline,.letters{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+      .photo,.photo:nth-child(1),.photo:nth-child(2),.photo:nth-child(4),.photo:nth-child(5){
+        grid-column:auto;
+        min-height:470px;
+      }
+      .hero-card{padding:42px 20px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <header class="hero">
+    <div class="hero-card">
+      <span class="mini">08 septembre — le jour où le monde a reçu quelqu'un de spécial</span>
+      <h1>Joyeux anniversaire <span>Anifa Iteka Harubuntu ❤️</span></h1>
+
+      <div class="dates">
+        <span class="date-pill">🎂 Née le 08 septembre 2003</span>
+        <span class="date-pill">✨ 23 ans le 08 septembre 2026</span>
+        <span class="date-pill">❤️ Nous depuis le 14 janvier 2026</span>
+      </div>
+
+      <p class="lead">
+        Anifa, je ne voulais pas seulement t'envoyer « joyeux anniversaire » comme on envoie un message ordinaire.
+        Je voulais te laisser quelque chose dans lequel tu puisses reconnaître notre histoire, nos kilomètres,
+        nos imperfections, nos efforts, nos prières… et surtout la place que tu as prise dans ma vie.
+      </p>
+
+      <div class="countdown" id="birthdayMessage">
+        Le 08 septembre 2026, cela fera <strong>237 jours</strong> depuis le 14 janvier 2026 —
+        237 jours d'une histoire qui n'a pas toujours été simple, mais que je continue de choisir avec toi.
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="#souvenirs">Ouvrir nos souvenirs 💕</a>
+        <a class="btn btn-secondary" href="#lettre">Lire ce que j'ai sur le cœur</a>
+        <button class="btn-secondary" id="musicBtn">▶ Notre musique</button>
+      </div>
+
+      <audio id="music" loop preload="none">
+        <source src="musique.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-title">
+        <h2>Quelques dates qui ne sont pas “juste des dates”</h2>
+        <p>
+          Parce que certaines dates finissent par porter un visage, une voix et tout un morceau de notre vie.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="moment">
+          <div class="when">08 septembre 2003</div>
+          <h3>Le début de ton histoire</h3>
+          <p>Bien avant que je te connaisse, ta vie avait déjà commencé à écrire la femme que j'allais un jour rencontrer et aimer.</p>
+        </article>
+
+        <article class="moment">
+          <div class="when">14 janvier 2026</div>
+          <h3>Le début de “nous”</h3>
+          <p>Je ne savais pas encore tout ce que nous allions traverser, apprendre, corriger et construire. Mais cette date est devenue la nôtre.</p>
+        </article>
+
+        <article class="moment">
+          <div class="when">08 septembre 2026</div>
+          <h3>Tes 23 ans</h3>
+          <p>Et cette fois, je peux célébrer ton anniversaire en ayant le privilège de t'appeler ma chérie, même si la distance m'empêche d'être à côté de toi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="souvenirs">
+      <div class="section-title">
+        <h2>Quand je regarde ces photos, je ne vois pas seulement des images 📸</h2>
+        <p>
+          J'y vois des détails qui me rappellent pourquoi, malgré les jours faciles et les jours compliqués, je tiens toujours à toi.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <article class="photo">
+          <img src="photo1.jpg" alt="Souvenir d'Anifa 1">
+          <div class="caption">Ton sourire… celui qui peut me faire oublier quelques secondes que tu es loin de moi. ❤️</div>
+        </article>
+
+        <article class="photo">
+          <img src="photo2.jpg" alt="Souvenir d'Anifa 2">
+          <div class="caption">La distance m'a appris une chose : on peut manquer énormément à quelqu'un qu'on ne peut même pas toucher.</div>
+        </article>
+
+        <article class="photo">
+          <img src="photo3.jpg" alt="Souvenir d'Anifa 3">
+          <div class="caption">Je connais tes bons côtés, mais je connais aussi nos moments difficiles. Et pourtant, quand je pense à demain, je pense encore à nous.</div>
+        </article>
+
+        <article class="photo">
+          <img src="photo4.jpg" alt="Souvenir d'Anifa 4">
+          <div class="caption">Tu n'es pas parfaite. Moi non plus. Ce que je veux, ce n'est pas une histoire parfaite : c'est une histoire vraie, qui apprend à devenir meilleure.</div>
+        </article>
+
+        <article class="photo">
+          <img src="photo5.jpg" alt="Souvenir d'Anifa 5">
+          <div class="caption">Il y a des jours où j'aimerais seulement entendre ta voix tout près, te regarder sans écran entre nous et te serrer dans mes bras.</div>
+        </article>
+
+        <article class="photo">
+          <img src="photo6.jpg" alt="Souvenir d'Anifa 6">
+          <div class="caption">Et je garde cette idée dans mon cœur : qu'un jour, nos souvenirs ne seront plus seulement des appels et des photos à distance, mais une vie réellement partagée.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="lettre">
+      <div class="section-title">
+        <h2>Ce que je veux te dire, Anifa 💌</h2>
+      </div>
+
+      <div class="letters">
+        <article class="letter reveal">
+          <div class="emoji">🌹</div>
+          <h3>Je te connais autrement qu'à travers une photo</h3>
+          <p>
+            Je connais la fille qui peut rire avec moi, celle qui peut aussi se fâcher contre moi, celle qui attend que mes paroles soient suivies d'actes.
+            Je connais une Anifa qui veut être rassurée, respectée et choisie pour de vrai. Et c'est justement cette personne-là que je célèbre aujourd'hui.
+          </p>
+        </article>
+
+        <article class="letter reveal">
+          <div class="emoji">🥹</div>
+          <h3>Tu me manques d'une façon très réelle</h3>
+          <p>
+            Parfois « tu me manques » paraît trop petit. Parce que ce qui me manque, ce n'est pas seulement ton visage : c'est la possibilité de partager avec toi les choses ordinaires,
+            de te voir sans regarder l'heure et de ne pas avoir à mesurer notre présence en appels et en messages.
+          </p>
+        </article>
+
+        <article class="letter reveal">
+          <div class="emoji">🙏🏽</div>
+          <h3>Je demande à Dieu de rester au milieu de nous</h3>
+          <p>
+            Nous avons déjà compris que l'amour seul ne suffit pas s'il n'y a pas la vérité, la patience, la confiance et des efforts.
+            Alors pour tes 23 ans, je prie aussi pour que Dieu te protège, te fasse grandir et nous apprenne à construire quelque chose qui mérite de durer.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="big-message reveal">
+        <p>
+          Anifa Iteka Harubuntu, le 08 septembre 2026 je ne célèbre pas seulement le fait que tu as 23 ans.
+          Je célèbre le fait que, depuis le 14 janvier, une partie de mes journées porte ton nom.
+          Nous avons eu des sourires, des incompréhensions, des pardons, des questions sur notre avenir et des moments où il fallait choisir de continuer.
+          Et aujourd'hui encore, je veux que tu saches une chose simple : <strong>je ne te considère pas comme une personne quelconque dans ma vie.</strong>
+          Tu es celle avec qui j'espère transformer la distance d'aujourd'hui en souvenirs que nous raconterons un jour en étant assis l'un à côté de l'autre.
+        </p>
+
+        <span class="kirundi">
+          Uri kure y'amaso, ariko nturi kure y'umutima wanje. Ndagukunda cane, Anifa. ❤️
+        </span>
+
+        <div class="signature">Joyeux 23e anniversaire, Iteka. — Louange ❤️</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Fait spécialement pour Anifa Iteka Harubuntu • 08 septembre 2026 ❤️
+  </footer>
+
+  <div class="toast" id="toast">Ajoute un fichier musique.mp3 🎵</div>
+
+  <script>
+    // Cœurs flottants
+    const heartBox = document.getElementById("hearts");
+    const hearts = ["❤","♡","💕","💗","💖"];
+
+    for(let i=0;i<26;i++){
+      const h=document.createElement("span");
+      h.className="heart";
+      h.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+      h.style.left=Math.random()*100+"vw";
+      h.style.fontSize=(14+Math.random()*28)+"px";
+      h.style.animationDuration=(9+Math.random()*15)+"s";
+      h.style.animationDelay=(-Math.random()*18)+"s";
+      heartBox.appendChild(h);
+    }
+
+    // Apparition progressive des messages au scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },{threshold:.18});
+
+    document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+    // Message adapté à la date d'ouverture du site
+    const birthdayMessage = document.getElementById("birthdayMessage");
+    const birthday = new Date("2026-09-08T00:00:00");
+    const now = new Date();
+    const oneDay = 1000 * 60 * 60 * 24;
+    const daysLeft = Math.ceil((birthday - now) / oneDay);
+
+    if (daysLeft > 1) {
+      birthdayMessage.innerHTML = `Encore <strong>${daysLeft} jours</strong> avant tes 23 ans. Et le 08 septembre 2026, cela fera <strong>237 jours</strong> depuis le 14 janvier 2026.`;
+    } else if (daysLeft === 1) {
+      birthdayMessage.innerHTML = `Demain, tu auras <strong>23 ans</strong>. Et demain, cela fera aussi <strong>237 jours</strong> depuis le début de notre histoire.`;
+    } else if (daysLeft === 0) {
+      birthdayMessage.innerHTML = `C'est aujourd'hui. ❤️ <strong>Joyeux 23e anniversaire, Anifa.</strong> Et aujourd'hui, cela fait <strong>237 jours</strong> depuis le 14 janvier 2026.`;
+    } else {
+      birthdayMessage.innerHTML = `Le 08 septembre 2026, tu as célébré tes <strong>23 ans</strong> — une date que je voulais marquer autrement qu'avec un simple message.`;
+    }
+
+    // Musique
+    const music=document.getElementById("music");
+    const musicBtn=document.getElementById("musicBtn");
+    const toast=document.getElementById("toast");
+
+    function showToast(message){
+      toast.textContent=message;
+      toast.classList.add("show");
+      setTimeout(()=>toast.classList.remove("show"),2500);
+    }
+
+    musicBtn.addEventListener("click", async ()=>{
+      try{
+        if(music.paused){
+          await music.play();
+          musicBtn.textContent="⏸ Pause";
+        }else{
+          music.pause();
+          musicBtn.textContent="▶ Notre musique";
+        }
+      }catch(e){
+        showToast("La musique n'est pas encore ajoutée : place musique.mp3 dans le même dossier 🎵");
+      }
+    });
+  </script>
+</body>
+</html>
