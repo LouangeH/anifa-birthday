@@ -1,0 +1,20 @@
+ANIFA BIRTHDAY - VERSION FINALE
+
+Contenu :
+- index.html : page d'accueil
+- album.html : enveloppe + narration + lettre + album de 40 photos
+- assets/Lettre_Anifa_voix_nettoyee.mp3 : narration
+- assets/Lettre_pour_Anifa_Iteka_Harubuntu.pdf : lettre téléchargeable
+- photos/01.jpg à photos/40.jpg : album
+
+Mise en ligne GitHub Pages :
+1. Décompresse le ZIP.
+2. Envoie TOUT le contenu du dossier anifa_birthday_final à la racine de ton dépôt GitHub.
+3. Settings > Pages > Deploy from a branch > main / root.
+4. Ouvre l'adresse GitHub Pages générée.
+
+Important :
+- Le son commence lorsque Iteka touche l'enveloppe, ce qui respecte les restrictions des navigateurs mobiles.
+- Le bouton PDF fonctionne sans serveur particulier sur GitHub Pages.
+- L'album contient 40 photos sélectionnées parmi les lots reçus.
+- Durée narration : 12.6 minutes.
